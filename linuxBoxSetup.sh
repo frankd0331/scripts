@@ -83,3 +83,18 @@ echo "export PATH=$PATH:/home/frankd/bin/scala-2.10.2/bin" >> .bashrc
 
 cd bin
 wget http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch//0.12.4/sbt-launch.jar
+cd $HOME
+cd scripts
+cp sbt ~/bin
+cd $HOME
+chmod u+x ~/bin/sbt
+echo "" >> .bashrc
+echo "# I thought my home bin was already in path, but just in case" >> .bashrc
+echo "export PATH=$PATH:/home/frankd/bin" >> .bashrc
+
+# install Clojure
+cd $HOME
+cd bin
+wget https://raw.github.com/technomancy/leiningen/stable/bin/lein
+chmod 755 lein
+cd $HOME
