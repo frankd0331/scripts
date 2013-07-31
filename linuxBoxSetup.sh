@@ -67,4 +67,19 @@ echo "" >> .bashrc
 echo "# enabling 256 colors in terminal" >> .bashrc
 echo "export TERM=xterm-256color" >> .bashrc
 
+# make the projects directory
+cd $HOME
+mkdir projects
 
+# install Scala
+sudo apt-get install -y openjdk-7-jdk
+cd bin
+wget http://www.scala-lang.org/files/archive/scala-2.10.2.tgz
+tar -xvf scala-2.10.2.tgz
+cd $HOME
+echo "" >> .bashrc
+echo "# adding Scala to path" >> .bashrc
+echo "export PATH=$PATH:/home/frankd/bin/scala-2.10.2/bin" >> .bashrc
+
+cd bin
+wget http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch//0.12.4/sbt-launch.jar
