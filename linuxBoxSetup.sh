@@ -18,6 +18,7 @@ sudo apt-get install -y emacs24-nox emacs24-el emacs24-common-non-dfsg
 sudo apt-get install -y terminator
 sudo apt-get install -y guake
 sudo apt-get install -y curl
+sudo apt-get install -y g++
 
 # setting up my dotfiles
 
