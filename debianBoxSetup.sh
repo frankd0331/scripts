@@ -35,6 +35,8 @@ ln -sb ~/dotfiles/config.terminator config
 # make a home bin dir
 cd $HOME
 mkdir bin
+
+# ln .emacs.d
 ln -sb dotfiles/.emacs.d
 
 # disabling <Ctrl-s> in terminal
