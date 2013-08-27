@@ -10,11 +10,15 @@ sudo apt-get upgrade
 
 # installing vim, emacs, terminator, guake, curl
 sudo apt-get install -y vim
-sudo apt-get install -y emacs 
 sudo apt-get install -y terminator
 sudo apt-get install -y guake
 sudo apt-get install -y curl
 sudo apt-get install -y g++
+
+# install emacs 24
+wget -q -O - http://emacs.naquadah.org/key.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install -y emacs-snapshot-nox
 
 # setting up my dotfiles
 
