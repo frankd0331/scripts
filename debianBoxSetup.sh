@@ -75,3 +75,7 @@ cd $HOME
 # ToDo:
 # install Node
 # install Haskell
+
+echo "*****Reload bash*****"
+cd $HOME
+source .bashrc
