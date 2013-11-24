@@ -17,6 +17,7 @@ sudo apt-get install -y terminator
 sudo apt-get install -y curl
 sudo apt-get install -y g++
 sudo apt-get install -y valgrind
+sudo apt-get install -y haskell-platform
 
 echo "*****Installing Emacs 24*****"
 wget -q -O - http://emacs.naquadah.org/key.gpg | sudo apt-key add -
