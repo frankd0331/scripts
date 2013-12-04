@@ -9,17 +9,16 @@
 # also not sure if I should put -y in the UPGRADE line
 echo "*****update & upgrade*****"
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get -y upgrade
 
 echo "*****installing vim, emacs, terminator, curl*****"
 sudo apt-get install -y git
 sudo apt-get install -y vim
 sudo apt-get install -y terminator
 sudo apt-get install -y curl
-sudo apt-get install -y g++
-sudo apt-get install -y valgrind
 sudo apt-get install -y haskell-platform
-sudo apt-get install -y golang
+sudo apt-get install -y racket
+sudo apt-get install -y openjdk-7-jdk
 
 echo "*****Installing Emacs 24*****"
 wget -q -O - http://emacs.naquadah.org/key.gpg | sudo apt-key add -
@@ -61,9 +60,6 @@ echo "*****make the projects directory*****"
 cd $HOME
 mkdir projects
 
-echo "*****install jdk7*****"
-sudo apt-get install -y openjdk-7-jdk
-
 echo "*****add home bin to path*****"
 echo "" >> .bashrc
 echo "# I thought my home bin was already in path, but just in case" >> .bashrc
@@ -80,12 +76,6 @@ nvm use v0.10.12
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
 npm install -g jshint
-
-echo "*****Install Haskell*****"
-sudo apt-get install -y haskell-platform
-
-echo "*****Install Racket*****"
-sudo apt-get install -y racket
 
 echo "*****Install Erlang*****"
 sudo echo "deb http://packages.erlang-solutions.com/debian wheezy contrib" >> /etc/apt/sources.list
