@@ -24,7 +24,7 @@ echo "*****myppa.list*****"
 touch tmp/myppa.list
 echo "deb http://emacs.naquadah.org/ stable/" >> tmp/myppa.list
 echo "deb http://packages.erlang-solutions.com/debian wheezy contrib" >> tmp/myppa.list
-sudo cp myppa.list /etc/apt/sources.list.d/
+sudo cp tmp/myppa.list /etc/apt/sources.list.d/
 rm tmp/myppa.list
 
 echo "*****Installing Emacs 24*****"
