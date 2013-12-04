@@ -82,7 +82,7 @@ sudo echo "deb http://packages.erlang-solutions.com/debian wheezy contrib" >> /e
 wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc
 sudo apt-key add erlang_solutions.asc
 sudo apt-get update
-sudo apt-get install erlang
+sudo apt-get install -y erlang
 
 echo "*****Install Elixir*****"
 cd $HOME
