@@ -21,6 +21,8 @@ sudo apt-get install -y racket
 sudo apt-get install -y openjdk-7-jdk
 
 echo "*****myppa.list*****"
+cd $HOME
+mkdir tmp
 touch tmp/myppa.list
 echo "deb http://emacs.naquadah.org/ stable/" >> tmp/myppa.list
 echo "deb http://packages.erlang-solutions.com/debian wheezy contrib" >> tmp/myppa.list
