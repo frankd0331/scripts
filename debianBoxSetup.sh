@@ -78,7 +78,13 @@ nvm use v0.10.12
 npm install -g jshint
 
 echo "*****Install Erlang*****"
-sudo echo "deb http://packages.erlang-solutions.com/debian wheezy contrib" >> /etc/apt/sources.list
+cd $HOME
+cd tmp
+touch erlangppa.list
+echo "deb http://packages.erlang-solutions.com/debian wheezy contrib" >> erlangppa.list
+sudo cp erlangppa.list /etc/apt/sources.list.d/
+rm erlangppa.list
+cd $HOME
 wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc
 sudo apt-key add erlang_solutions.asc
 sudo apt-get update
