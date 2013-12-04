@@ -7,6 +7,7 @@
 
 # not sure if this should be part of the script
 # also not sure if I should put -y in the UPGRADE line
+echo "*****update & upgrade*****"
 sudo apt-get update
 sudo apt-get upgrade
 
@@ -68,17 +69,45 @@ echo "" >> .bashrc
 echo "# I thought my home bin was already in path, but just in case" >> .bashrc
 echo "export PATH=$PATH:/home/frankd/bin" >> .bashrc
 
-echo "*****install Clojure*****"
+echo "*****install node*****"
+curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+
+# Load nvm and install latest production node
+source $HOME/.nvm/nvm.sh
+nvm install v0.10.12
+nvm use v0.10.12
+
+# Install jshint to allow checking of JS code within emacs
+# http://jshint.com/
+npm install -g jshint
+
+echo "*****Install Haskell*****"
+sudo apt-get install -y haskell-platform
+
+echo "*****Install Racket*****"
+sudo apt-get install -y racket
+
+echo "*****Install Erlang*****"
+sudo echo "deb http://packages.erlang-solutions.com/debian wheezy contrib" >> /etc/apt/sources.list
+wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc
+sudo apt-key add erlang_solutions.asc
+sudo apt-get update
+sudo apt-get install erlang
+
+echo "*****Install Elixir*****"
 cd $HOME
 cd bin
-wget https://raw.github.com/technomancy/leiningen/stable/bin/lein
-chmod 755 lein
+git clone https://github.com/elixir-lang/elixir.git
+cd elixir
+make clean test
 cd $HOME
-
-# ToDo:
-# install Node
-# install Haskell
+echo "" >> .bashrc
+echo "# Adding Elixir to PATH" >> .bashrc
+echo "export PATH=$PATH:/home/frankd/bin/elixir/bin" >> .bashrc
 
 echo "*****Reload bash*****"
 cd $HOME
 source .bashrc
+
+# ToDo:
+# Test
