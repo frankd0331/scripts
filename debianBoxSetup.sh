@@ -20,7 +20,15 @@ sudo apt-get install -y haskell-platform
 sudo apt-get install -y racket
 sudo apt-get install -y openjdk-7-jdk
 
+echo "*****myppa.list*****"
+touch tmp/myppa.list
+echo "deb http://emacs.naquadah.org/ stable/" >> tmp/myppa.list
+echo "deb http://packages.erlang-solutions.com/debian wheezy contrib" >> tmp/myppa.list
+sudo cp myppa.list /etc/apt/sources.list.d/
+rm tmp/myppa.list
+
 echo "*****Installing Emacs 24*****"
+# not sure if the following wget is needed
 wget -q -O - http://emacs.naquadah.org/key.gpg | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install -y emacs-snapshot-nox
@@ -78,13 +86,6 @@ nvm use v0.10.12
 npm install -g jshint
 
 echo "*****Install Erlang*****"
-cd $HOME
-cd tmp
-touch erlangppa.list
-echo "deb http://packages.erlang-solutions.com/debian wheezy contrib" >> erlangppa.list
-sudo cp erlangppa.list /etc/apt/sources.list.d/
-rm erlangppa.list
-cd $HOME
 wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc
 sudo apt-key add erlang_solutions.asc
 sudo apt-get update
