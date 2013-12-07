@@ -87,22 +87,10 @@ nvm use v0.10.12
 # http://jshint.com/
 npm install -g jshint
 
-echo "*****Install Erlang*****"
-wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc
-sudo apt-key add erlang_solutions.asc
-sudo apt-get update
-sudo apt-get install -y erlang
-
-echo "*****Install Elixir*****"
-cd $HOME
 cd bin
-git clone https://github.com/elixir-lang/elixir.git
-cd elixir
-make clean test
+wget https://raw.github.com/technomancy/leiningen/stable/bin/lein
+chmod u+x lein
 cd $HOME
-echo "" >> .bashrc
-echo "# Adding Elixir to PATH" >> .bashrc
-echo "export PATH=$PATH:/home/frankd/bin/elixir/bin" >> .bashrc
 
 echo "*****Reload bash*****"
 cd $HOME
