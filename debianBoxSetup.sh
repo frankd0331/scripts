@@ -58,6 +58,7 @@ echo "*****ln .xmonad*****"
 ln -sb dotfiles/.xmonad
 cd bin
 ln -sb ~/dotfiles/xmonad.start
+chmod u+x xmonad.start
 # I'll think about how I want to change xmonad.desktop later
 
 echo "*****disabling <Ctrl-s> in terminal*****"
