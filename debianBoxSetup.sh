@@ -85,6 +85,12 @@ echo "export PATH=$PATH:/home/frankd/bin" >> .bashrc
 echo "*****install node*****"
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 
+echo "*****mongoDB*****"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+echo 'deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+sudo apt-get update
+sudo apt-get install -y mongodb-10gen
+
 # Load nvm and install latest production node
 source $HOME/.nvm/nvm.sh
 nvm install v0.10.12
