@@ -8,12 +8,13 @@ echo "*****update & upgrade*****"
 sudo apt-get update
 sudo apt-get -y upgrade
 
-echo "*****installing vim, emacs, terminator, curl*****"
+echo "*****installing vim, emacs, terminator, curl, etc*****"
 sudo apt-get install -y git
 sudo apt-get install -y terminator
 sudo apt-get install -y curl
 sudo apt-get install -y gnome-do
 sudo apt-get install -y emacs24-nox
+sudo apt-get install -y build-essential
 
 echo "*****Setting up my dotfiles*****"
 
@@ -56,6 +57,18 @@ echo "# I thought my home bin was already in path, but just in case" >> .bashrc
 echo "export PATH=$PATH:/home/frankd/bin" >> .bashrc
 
 echo "*****install node*****"
+wget -qO- https://raw.github.com/creationix/nvm/v0.4.0/inall.sh | sh
+source ~/.nvm/nvm.sh
+nvm install v0.10.26
+nvm use v0.10.26
+npm install -g jshint
+npm install jasmine-node -g
+
+echo "*****install exercism*****"
+curl -s http://cli.exercism.io/install | sh
+cd projects
+mkdir exercism
+cd $HOME
 
 echo "*****mongoDB*****"
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
