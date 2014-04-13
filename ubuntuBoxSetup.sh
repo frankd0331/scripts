@@ -12,7 +12,7 @@ echo "*****installing vim, emacs, terminator, curl, etc*****"
 sudo apt-get install -y git
 sudo apt-get install -y terminator
 sudo apt-get install -y curl
-sudo apt-get install -y gnome-do
+#sudo apt-get install -y gnome-do
 sudo apt-get install -y emacs24-nox
 sudo apt-get install -y build-essential
 sudo apt-get install -y calibre
@@ -90,6 +90,4 @@ cd $HOME
 source .bashrc
 
 # ToDo:
-# Test
-# node
-# make an nvidia script
+
