@@ -15,6 +15,10 @@ sudo apt-get install -y curl
 sudo apt-get install -y gnome-do
 sudo apt-get install -y emacs24-nox
 sudo apt-get install -y build-essential
+sudo apt-get install -y calibre
+sudo apt-get install -y clementine
+sudo apt-get install -y inkscape
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
 echo "*****Setting up my dotfiles*****"
 
@@ -75,6 +79,11 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
 echo 'deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 sudo apt-get update
 sudo apt-get install -y mongodb-10gen
+
+echo "*****install oracle java for webstorm*****"
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install -y oracle-java7-installer
 
 echo "*****Reload bash*****"
 cd $HOME
