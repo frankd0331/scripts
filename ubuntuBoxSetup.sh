@@ -2,7 +2,7 @@
 # setup for an Ubuntu Distro
 # specifically xubuntu
 #
-# You will need to chmod u+x debianBoxSetup.sh in order to run it
+# You will need to chmod u+x ubuntuBoxSetup.sh in order to run it
 
 echo "*****update & upgrade*****"
 sudo apt-get update
