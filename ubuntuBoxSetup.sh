@@ -18,7 +18,7 @@ sudo apt-get install -y build-essential
 sudo apt-get install -y calibre
 sudo apt-get install -y clementine
 sudo apt-get install -y inkscape
-cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+#cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
 echo "*****Setting up my dotfiles*****"
 
