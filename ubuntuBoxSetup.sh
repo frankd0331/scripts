@@ -63,6 +63,9 @@ echo "export PATH=$PATH:/home/frankd/bin" >> .bashrc
 echo "*****install node*****"
 cd Downloads
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh | sh
+echo "" >> .bashrc
+echo "# node" >> .bashrc
+echo "source ~/.nvm/nvm.sh" >> .bashrc
 source ~/.nvm/nvm.sh
 nvm install 0.10.28
 nvm use 0.10.28
