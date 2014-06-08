@@ -60,18 +60,17 @@ echo "" >> .bashrc
 echo "# I thought my home bin was already in path, but just in case" >> .bashrc
 echo "export PATH=$PATH:/home/frankd/bin" >> .bashrc
 
-echo "*****install node*****"
-cd Downloads
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh | sh
-echo "" >> .bashrc
-echo "# node" >> .bashrc
-echo "source ~/.nvm/nvm.sh" >> .bashrc
-source ~/.nvm/nvm.sh
-nvm install 0.10
-nvm alias default 0.10
-npm install -g jshint
-npm install jasmine-node -g
-cd $HOME
+#echo "*****install node*****"
+#git clone https://github.com/creationix/nvm.git ~/.nvm
+#echo "" >> .bashrc
+#echo "# node" >> .bashrc
+#echo "source ~/.nvm/nvm.sh" >> .bashrc
+#source ~/.nvm/nvm.sh
+#nvm install 0.10
+#nvm alias default 0.10
+#npm install -g jshint
+#npm install jasmine-node -g
+#cd $HOME
 
 echo "*****install exercism*****"
 curl -s http://cli.exercism.io/install | sh
