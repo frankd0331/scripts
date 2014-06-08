@@ -67,8 +67,8 @@ echo "" >> .bashrc
 echo "# node" >> .bashrc
 echo "source ~/.nvm/nvm.sh" >> .bashrc
 source ~/.nvm/nvm.sh
-nvm install 0.10.28
-nvm alias default 0.10.28
+nvm install 0.10
+nvm alias default 0.10
 npm install -g jshint
 npm install jasmine-node -g
 cd $HOME
